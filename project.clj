@@ -1,8 +1,9 @@
-(defproject cljs-intro "0.1.0-SNAPSHOT"
+(defproject cljs-intro "0.1.0"
   :description "RenoJS ClojureScript Intro"
   :url "http://github.com/seberius/cljs-intro"
 
-  :dependencies [[org.clojure/clojure "1.5.1"]]
+  :dependencies [[org.clojure/clojure "1.5.1"]
+                 [org.clojure/clojurescript "0.0-2156"]]
 
   :plugins [[lein-cljsbuild "1.0.2"]]
 
@@ -13,6 +14,6 @@
               :source-paths ["src-cljs"]
               :compiler {
                 :output-to "js/cljs_intro.js"
-                :output-dir "out"
+                :output-dir "js/out"
                 :optimizations :whitespace
-                :source-map true}}]})
+                :source-map "js/cljs_intro.js.map"}}]})
