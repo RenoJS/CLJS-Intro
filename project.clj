@@ -1,9 +1,10 @@
-(defproject cljs-intro "0.2.0"
+(defproject cljs-intro "0.2.1"
   :description "RenoJS ClojureScript Intro"
   :url "http://github.com/seberius/cljs-intro"
 
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-2156"]]
+                 [org.clojure/clojurescript "0.0-2156"]
+                 [prismatic/dommy "0.1.2"]]
 
   :plugins [[lein-cljsbuild "1.0.2"]]
 

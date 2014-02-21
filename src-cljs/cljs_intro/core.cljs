@@ -1,13 +1,13 @@
 (ns cljs-intro.core
-  (:require [goog.dom :as dom]
-            [goog.events :as events]))
+  (:require [dommy.core :as dom])
+  (:require-macros [dommy.macros :refer [sel1]]))
 
 (defn add1 []
-  (let [element (dom/getElement "number")
-        value (js/parseInt (.-innerHTML element))]
-    (set! (.-innerHTML element) (+ value 1))))
+  (let [element (sel1 :#number)
+        value (js/parseInt (dom/html element))]
+    (dom/set-html! element (+ value 1))))
 
 (defn ^:export init []
-  (events/listen (dom/getElement "plusone") "click" (fn [e] (add1))))
+  (dom/listen! (sel1 :#plusone) "click" (fn [e] (add1))))
 
 (set! (.-onload js/window) init)
