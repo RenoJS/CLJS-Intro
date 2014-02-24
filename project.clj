@@ -1,4 +1,4 @@
-(defproject cljs-intro "0.2.1"
+(defproject cljs-intro "0.2.2"
   :description "RenoJS ClojureScript Intro"
   :url "http://github.com/seberius/cljs-intro"
 
@@ -14,7 +14,14 @@
     :builds [{:id "cljs-intro"
               :source-paths ["src-cljs"]
               :compiler {
-                :output-to "js/cljs_intro.js"
-                :output-dir "js/out"
+                :output-to "resources/js/cljs_intro.js"
+                :output-dir "resources/js/out"
+                :optimizations :advanced}}
+
+             {:id "cljs-intro-dev"
+              :source-paths ["src-cljs"]
+              :compiler {
+                :output-to "resources/dev/js/cljs_intro.js"
+                :output-dir "resources/dev/js/out"
                 :optimizations :whitespace
-                :source-map "js/cljs_intro.js.map"}}]})
+                :source-map "resources/dev/js/cljs_intro.js.map"}}]})
