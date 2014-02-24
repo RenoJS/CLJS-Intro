@@ -1,4 +1,4 @@
-(defproject cljs-intro "1.2.0"
+(defproject cljs-intro "1.3.0"
   :description "RenoJS ClojureScript Intro"
   :url "http://github.com/seberius/cljs-intro"
 
