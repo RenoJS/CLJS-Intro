@@ -1,10 +1,9 @@
-(defproject cljs-intro "0.2.2"
+(defproject cljs-intro "1.0.0"
   :description "RenoJS ClojureScript Intro"
   :url "http://github.com/seberius/cljs-intro"
 
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-2156"]
-                 [prismatic/dommy "0.1.2"]]
+                 [org.clojure/clojurescript "0.0-2156"]]
 
   :plugins [[lein-cljsbuild "1.0.2"]]
 
@@ -14,8 +13,8 @@
     :builds [{:id "cljs-intro"
               :source-paths ["src-cljs"]
               :compiler {
-                :output-to "resources/js/cljs_intro.js"
-                :output-dir "resources/js/out"
+                :output-to "resources/public/js/cljs_intro.js"
+                :output-dir "resources/public/js/out"
                 :optimizations :advanced}}
 
              {:id "cljs-intro-dev"
